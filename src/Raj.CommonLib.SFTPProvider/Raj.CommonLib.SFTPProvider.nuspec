@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>Raj.CommonLib.SFTPProvider</id>
+    <version>1.0.0-beta2</version>
+    <title>Raj.CommonLib.SFTPProvider</title>
+    <authors>Rohit Jadhav</authors>
+    <owners>Rohit A Jadhav</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/rohitsoftt/RAJ.COMMONLIB.git</projectUrl>
+    <iconUrl>https://github.com/rohitsoftt/RAJ.COMMONLIB/blob/master/src/Raj.CommonLib.SFTPProvider/icons8-portal-32.png?raw=true</iconUrl>
+    <description>Helps to manage SFTP client and provides easy way to use Renci SFTP client</description>
+    <releaseNotes>Documentation file added</releaseNotes>
+    <copyright>Copyright 2020</copyright>
+    <tags>Raj.CommonLib.SFTPProvider SFTPProvider SFTP Provider</tags>
+	<dependencies>
+		<group targetFramework=".NETFramework4.0">
+			<dependency id="SSH.NET" version="2016.1.0" />
+		</group>
+	</dependencies>
+  </metadata>
+</package>

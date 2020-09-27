@@ -22,8 +22,10 @@ namespace Raj.CommonLib.EmailClient
             {
                 From = new MailAddress(emailCredentials.FromEmailAddress, emailCredentials.FromName),
                 Subject = subject,
-                Body = body
-            };
+                Body = body,
+                Priority = MailPriority.High,
+                BodyEncoding = Encoding.UTF8
+        };
             mail.IsBodyHtml = true;
             mail.To.Add(emailCredentials.ToEmails);
             mail.ReplyToList.Add(emailCredentials.ReplyToEmails);
@@ -51,8 +53,11 @@ namespace Raj.CommonLib.EmailClient
                 UseDefaultCredentials = false,
                 Host = emailCredentials.SMTP,
                 EnableSsl = true,
-                Credentials = credentials
+                Credentials = credentials,
+                
             };
+            client.ServicePoint.MaxIdleTime = 0;
+            client.ServicePoint.SetTcpKeepAlive(true, 2000, 2000);
             try
             {
                 await client.SendMailAsync(mail);
